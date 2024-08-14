@@ -10,4 +10,7 @@ jobs:
             - name: Install cowsay
               run: sudo apt-get install cowsay
             - name: Say hello
-              run: cowsay "Hello Linux"
+              run: 
+                cowsay "Hello Linux"
+                ls -ltra
+                cat README.md
