@@ -1,4 +1,4 @@
-name: My First Workflow
+name: My Second Workflow
 on: push
 jobs:
     first_job:
@@ -9,8 +9,6 @@ jobs:
 
             - name: Install cowsay
               run: sudo apt-get install cowsay
-            - name: Say hello
+            - name: Execute Shell Script
               run: 
-                cowsay "Hello Linux"
-                ls -ltra
-                cat README.md
+                ./ascii-script.sh
