@@ -12,6 +12,7 @@ jobs:
             - name: Cowsay
               run: cowsay hello > hello.txt
     second_job:
+        needs: first_job
         runs-on: ubuntu-latest
         steps: 
             - uses: actions/upload-artifact@v4
@@ -19,6 +20,7 @@ jobs:
                 name: my-artifact
                 path: cowsayhello.txt
     third_job:
+        needs: second_job
         runs-on: ubuntu-latest
         steps: 
             - uses: actions/download-artifact@v4
