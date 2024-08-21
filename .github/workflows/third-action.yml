@@ -14,7 +14,7 @@ jobs:
             - name: upload text file
               uses: actions/upload-artifact@v4
               with:
-                name: my-artifact
+                name: cowsay
                 path: cowsayhello.txt
     second_job:
         needs: first_job
@@ -22,14 +22,14 @@ jobs:
         steps: 
             - uses: actions/download-artifact@v4
               with:
-                name: my-artifact
+                name: cowsay
     third_job:
         needs: second_job
         runs-on: ubuntu-latest
         steps: 
             - uses: actions/download-artifact@v4
               with:
-                name: my-artifact
+                name: cowsay
                 path: cowsayhello.txt
 
         
