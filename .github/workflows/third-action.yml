@@ -31,6 +31,8 @@ jobs:
               with:
                 name: cowsay
                 path: hello.txt
+            - name: Read file download
+              run: cat hello.txt
 
         
         
