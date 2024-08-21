@@ -30,7 +30,6 @@ jobs:
             - uses: actions/download-artifact@v4
               with:
                 name: cowsay
-                path: hello.txt
             - name: Read file download
               run: cat hello.txt
 
